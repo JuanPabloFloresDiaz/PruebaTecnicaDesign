@@ -1,0 +1,105 @@
+/* Estilos para las cartas del carrusel */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.card {
+    color: black;
+    border: 2px solid rgb(2, 8, 135); /* Azul oscuro */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: 60%;
+    background-image: url('../../resources/img/svg/logo_opaco.svg'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(90deg, rgb(2, 8, 135), rgb(1, 2, 37)); /* Degradado azul oscuro */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-image {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamaño de letra más grande */
+    margin-bottom: 0.75rem;
+    color: rgb(2, 8, 135); /* Azul oscuro */
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.card-footer {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    background: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37)); /* Degradado del borde */
+    color: white;
+    font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem; /* Ajusta el ancho del botón según sea necesario */
+    font-size: 1rem; /* Ajusta el tamaño del texto si es necesario */
+    color: rgb(2, 8, 135); /* Azul oscuro */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.botones {
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    /* Sombra */
+    transition: all 0.3s ease;
+    /* Animación de transición */
+    background-color: rgb(2, 8, 135); /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    padding: 10px;
+}
+
+.botones:hover {
+    border-radius: 25%;
+    transform: scale(1.05);
+    /* Escala al 105% en hover */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    /* Sombra más pronunciada en hover */
+}
+
+.logo {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}

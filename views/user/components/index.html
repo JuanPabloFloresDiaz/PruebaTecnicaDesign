@@ -1,0 +1,142 @@
+<header class="bg-skyBlue2-pastel-color">
+    <div class="container-fluid">
+        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand fw-semibold titulo ms-5 mb-3" href="#" id='title'></a>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="container-fluid mb-5">
+        <div class="row gy-3">
+            <!-- Buscador -->
+            <div class="col-sm-12 col-md-6">
+                <form id="searchForm" class="d-flex">
+                    <button type="button" class="btn" data-bs-toggle="popover" data-bs-placement="top"
+                        data-bs-content="Busca por el nombre, el teléfono, el correo, el dui o el alias">
+                        <img src="../../../resources/img/svg/icons_forms/info.svg" width="18px" height="18px">
+                    </button>
+                    <input type="search" class="form-control me-3 borde-transparente campo rounded-3 shadow"
+                        name="search" placeholder="Buscar" autocomplete="off" required>
+                    <button type="submit"
+                        class="btn bg-blue-principal-color borde-transparente rounded-circle me-md-3 me-sm-0">
+                        <img src="../../../resources/img/svg/icons_forms/search.svg" width="18px" height="18px">
+                    </button>
+                    <button type="reset" class="btn" onclick="fillTable()">
+                        <img src="../../../resources/img/svg/icons_forms/reset.svg" width="18px" height="18px">
+                    </button>
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <!-- Botón Agregar -->
+                <button
+                    class="btn bg-blue-principal-color text-white ms-auto borde-transparente float-md-end float-sm-left btn-sm rounded-3"
+                    type="submit" onclick="openCreate()">
+                    <span class="fs-5 me-2">+</span> Agregar usuario
+                </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Tabla para mostrar los registros existentes -->
+    <div class="table-responsive">
+        <table class="table table align-middle table-striped table-borderless">
+            <!-- Cabeza de la tabla para mostrar la cantidad de registros y los títulos de las columnas -->
+            <thead>
+                <tr>
+                    <td colspan="6" id="rowsFound"></td>
+                </tr>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Nacimiento</th>
+                    <th>Dui</th>
+                    <th>Dirección</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <!-- Cuerpo de la tabla para mostrar un registro por fila -->
+            <tbody id="tabla_usuarios"></tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <!-- Aquí se insertarán los elementos de la paginación -->
+        </ul>
+    </nav>
+</div>
+
+<!-- Componente Modal para guardar un registro -->
+<div class="modal fade" id="saveModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-blue-principal-color">
+                <h1 class="modal-title fs-5 text-white" id="modalTitle"></h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <!-- Formulario para crear o actualizar un registro -->
+            <form id="saveForm">
+                <div class="modal-body row g-3">
+                    <!-- Campo oculto para asignar el id del registro al momento de modificar -->
+                    <input type="number" class="d-none" id="idUsuario" name="idUsuario">
+                    <div class="col-sm-12 col-md-6">
+                        <label for="nombreUsuario" class="form-label fw-semibold">Nombre</label>
+                        <input id="nombreUsuario" type="text" name="nombreUsuario" class="form-control"
+                            placeholder="Ingresa el nombre del usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="correoUsuario" class="form-label fw-semibold">Correo</label>
+                        <input id="correoUsuario" type="email" name="correoUsuario" class="form-control"
+                            placeholder="Ingresa el correo de usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="telefonoUsuario" class="form-label fw-semibold">Teléfono</label>
+                        <input id="telefonoUsuario" type="text" name="telefonoUsuario" class="form-control"
+                            placeholder="0000-0000" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="duiUsuario" class="form-label fw-semibold">DUI</label>
+                        <input id="duiUsuario" type="text" name="duiUsuario" class="form-control"
+                            placeholder="00000000-0" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="nacimientoUsuario" class="form-label fw-semibold">Fecha de nacimiento</label>
+                        <input id="nacimientoUsuario" type="date" name="nacimientoUsuario" class="form-control"
+                            placeholder="Ingresa la fecha de nacimiento del usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="direccionUsuario" class="form-label fw-semibold">Dirección</label>
+                        <input id="direccionUsuario" type="text" name="direccionUsuario" class="form-control"
+                            placeholder="Escribe la dirección del usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="claveUsuario" class="form-label fw-semibold">Contraseña</label>
+                        <input id="claveUsuario" type="password" name="claveUsuario" min="0.01" step="0.01"
+                            class="form-control" placeholder="Ingresa la clave del usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="confirmarClave" class="form-label fw-semibold">Repetir contraseña</label>
+                        <input id="confirmarClave" type="password" name="confirmarClave" min="0.01" step="0.01"
+                            class="form-control" placeholder="Repite la clave del usuario" autocomplete="off" required>
+                    </div>
+                    <div class="col-sm-12 col-md-12 form-check form-switch form-check-reverse">
+                        <input class="form-check-input" type="checkbox" id="estadoUsuario" name="estadoUsuario" checked>
+                        <label class="form-check-label" for="estadoUsuario">Estado</label>
+                    </div>
+                </div>
+                <div class="modal-footer col-sm-12 col-md-12 col-lg-12">
+                    <button type="reset" class="btn bg-red-cream-color text-white">Cancelar</button>
+                    <button type="submit" class="btn bg-blue-principal-color text-white ">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

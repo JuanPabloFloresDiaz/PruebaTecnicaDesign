@@ -1,0 +1,76 @@
+.tex-color{
+    color: #000444;
+    font-size: 80px;
+}
+
+.texSub-color{
+    color: #000444;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+
+.texParra-color{
+    text-align: justify;
+    font-size: 17px;
+}
+
+.icon-text-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-text-box i {
+    font-size: 24px;
+    color: #6A8EE5;
+    margin-right: 10px;
+}
+
+.text-box {
+    background-color: #6A8EE5;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.vertical-line {
+    border-left: 2px solid #46496A; /* Color y grosor de la línea */
+    height: 150px; /* Altura de la línea */
+    margin-right: 20px; /* Espaciado opcional */
+}
+
+.hashtag {
+    text-align: start;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #00004F; /* Color azul oscuro similar al de la imagen */
+}
+.phone-section {
+    display: flex;
+    align-items: center;
+    color: #00004F; /* Color azul oscuro */
+}
+.phone-icon {
+    margin-right: 15px;
+}
+.phone-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00004F;
+    
+}
+.phone-text {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.col-hr{
+    color: #46496A;
+}
+
+@media (max-width: 992px) {
+    .vertical-line {
+      display: none;
+    }
+  }

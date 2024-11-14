@@ -1,0 +1,399 @@
+.bajo-peso {
+    color: #0A0E23; /* Color azul oscuro para Peso bajo */
+}
+
+.normal {
+    color: #00C079; /* Color verde para Normal */
+}
+
+.sobrepeso {
+    color: #005BAC; /* Color azul para Sobrepeso */
+}
+
+.obesidad-tipo-1 {
+    color: #D06969; /* Color rojo claro para Obesidad tipo 1 */
+}
+
+.obesidad-tipo-2 {
+    color: #D06868; /* Color rojo oscuro para Obesidad tipo 2 */
+}
+
+.obesidad-tipo-3 {
+    color: #FF2A2A; /* Color rojo para Obesidad tipo 3 */
+}
+/* Estilo para el menu */
+.offcanvas,
+.offcanvas-body,
+.title-content {
+    scrollbar-width: none;
+    background-image: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37));
+}
+
+.dropdown-menu {
+    margin-left: 30px;
+    border: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: rgb(13, 56, 126);
+}
+
+.contenedor {
+    background-color: rgb(1, 4, 79);
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.navbar {
+    --bs-navbar-toggler-border-color: none;
+}
+
+
+
+/* Estilo para las tablas */
+.borde-transparente {
+    transition: all 0.3s ease;
+    /* Animación de transición */
+}
+
+.borde-transparente:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.305);
+    /* Sombra más pronunciada en hover */
+}
+
+.transparente {
+    border-radius: 20%;
+    background-color: rgb(255, 255, 255);
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.305);
+    /* Sombra */
+    transition: all 0.3s ease;
+    /* Animación de transición */
+}
+
+.transparente:hover {
+    border-radius: 100%;
+    transform: scale(1.05);
+    /* Escala al 105% en hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    /* Sombra más pronunciada en hover */
+}
+
+.circulo {
+    border-radius: 50%;
+}
+
+hr {
+    color: rgb(158, 154, 154);
+}
+
+
+/* Estilos para el dashboard    */
+.result_one {
+    background-image: linear-gradient(180deg, rgb(12, 186, 82), rgb(6, 84, 37));
+}
+
+.result_second {
+    background-image: linear-gradient(180deg, rgb(255, 84, 84), rgb(153, 50, 50));
+}
+
+.result_third {
+    background-image: linear-gradient(180deg, rgb(239, 171, 38), rgb(137, 98, 22));
+}
+
+#calendar{
+    height: 390px;
+}
+
+/* Participaciones jugadores estilos */
+
+.tarjetas,
+.tarjetas-equipos {
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjetas-equipos:hover {
+    transform: scale(1.05);
+}
+
+.tarjetas:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+
+.titulo-equipo {
+    background-image: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37));
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+.img {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+.margen {
+    margin-bottom: 0px;
+    margin-top: 85px;
+}
+
+.titulo {
+    font-size: 20px;
+}
+
+.icono-verde {
+    fill: green;
+}
+
+.icono-rojo {
+    fill: red;
+}
+
+@media (max-width: 770px) {
+    .margen {
+        margin-bottom: 2rem;
+        margin-top: 50px;
+    }
+
+
+    .titulo {
+        font-size: 16px;
+    }
+
+    .contactanos{
+        text-align: center;
+    }
+}
+
+/* Calendar */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#fc-dom-1 {
+    font-size: larger;
+}
+
+/*Estilo para participaciones*/
+#containerPicture {
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#dorsal {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Estilo de seleccionado para los botones del estado de animo*/
+.estado-btn:hover{
+    transform: scale(1.10);
+}
+
+.selected {
+    box-shadow: -1px 13px 62px -35px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    background-color: white;
+}
+
+/*Estilos para los botones del filtrado*/
+
+.style{
+    background-color: #0164d5;
+    border-color: #0164d5;
+    color: white;
+}
+
+.btn-style:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+#imgJugador {
+    border-radius: 20px;
+}
+
+#color1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0b5ed7;
+}
+
+#color2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d70b2a;
+}
+
+#color3 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0bd734;
+}
+
+#color4 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f5e00d;
+}
+
+#color5 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #8c0bd7;
+}
+
+#color6 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #d70b90;
+}
+
+#color7 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2a9cef;
+}
+
+.color-circle:hover{
+    transform: scale(1.2);
+}
+
+/* Css de tags */ 
+.card2 {
+    width: 100%;
+    height: 20%;
+    background: #020777;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffffff;
+    border-radius: 15px;
+  }
+  
+  .title2 {
+    font-weight: 900;
+    font-size: 1.7em;
+    padding-left: 3%;
+    padding-top: 2%;
+  }
+  .color_white
+  {
+    color: #000;
+  }
+  .tag__name {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.1em;
+    background-color: #fff2f2;
+    padding: 6px 23px 9px;
+    border-radius: 0.5em;
+    margin: 10px 8px 10px 0;
+    margin-left: 0px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tag__name::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    width: 7px;
+    height: 7px;
+  }
+  
+  .tag__name::before {
+    left: 7px;
+  }
+  
+  .tag__name::after {
+    right: 7px;
+  }
+  
+  .tag__name:hover {
+    transform: scale(1.1);
+    background-color: #cfcfcf;
+    color: #ffffff;
+  }
+
+#tableEstadoFisico {
+    max-height: 250px; /* Ajusta este valor según lo que necesites */
+    overflow-y: auto;
+}
+
+/*Estilos para las imagenesde la pantalla de archivos*/
+#imageZoom {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    overflow: auto;
+}
+
+#zoomImg {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 10%;
+}
+
+/* Estilo opcional para el select y la imagen */
+#lugar {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#lugar-img {
+    display: block;
+    margin-top: 10px;
+}
+
+.trofeo{
+    width: 200px;
+    height: 200px;
+}
+
+.logo_equipo_palmares{
+    width: 75px;
+    height: 75px;
+}
+.logo_medalla_palmares{
+    width: 50px;
+    height: 50px;
+}
+
+.correccion{
+    height: 300px;
+}
+
+.container{
+    margin-top: 50px;
+}

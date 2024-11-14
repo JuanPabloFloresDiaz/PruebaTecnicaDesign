@@ -1,0 +1,192 @@
+/* Definición de variables CSS */
+:root {
+  --primary-color: rgb(11, 78, 179);
+}
+
+/* Establece el box-sizing para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Estilos globales para las etiquetas */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos generales para los campos de entrada */
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Estilos para ajustar el ancho al 50% */
+.width-50 {
+  width: 50%;
+}
+
+/* Estilos para alinear a la izquierda */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Estilos para centrar texto */
+.text-center {
+  text-align: center;
+}
+
+/* Estilos para la barra de progreso */
+.progressbar,
+.progressbar1 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+/* Estilos para los elementos de progreso */
+.progressbar::before,
+.progressbar1::before,
+.progress,
+.progress1 {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dcdcdc;
+  z-index: 2;
+}
+
+/* Estilos para la barra de progreso activa */
+.progress,
+.progress1{
+  background-color: var(--primary-color);
+  width: 1%;
+  max-width: 95%;
+  transition: 0.3s;
+}
+
+/* Estilos para los pasos de progreso */
+.progress-step,
+.progress-step1 {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+/* Estilos para el número de paso */
+.progress-step::before,
+.progress-step1::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+/* Estilos para el título del paso */
+.progress-step::after,
+.progress-step1::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Estilos para el paso activo */
+.progress-step-active,
+.progress-step-active1 {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Estilos para el formulario */
+.form {
+  width: clamp(600px, 30%, 430px);
+  margin: 0 auto;
+  border-radius: 0.35rem;
+  padding: 2.5rem;
+}
+
+/* Estilos para los pasos del formulario */
+.form-step,
+.form-step1 {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+/* Estilos para el paso activo del formulario */
+.form-step-active,
+.form-step-active1 {
+  display: block;
+}
+
+/* Estilos para los grupos de entrada */
+.input-group,
+.input-group1 {
+  margin: 2rem 0;
+}
+
+/* Estilos para el grupo de botones */
+.btns-group,
+.btns-group1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Estilos para los botones */
+.btn,
+.btn1 {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efecto de hover para los botones */
+.btn:hover,
+.btn1:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+/* Estilos responsivos */
+@media (max-width: 770px) {
+  /* Estilos para el título del paso en dispositivos móviles */
+  .progress-step::after,
+  .progress-step1::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.60rem;
+    color: #666;
+    z-index: 1;
+  }
+}
+
+/* Animación para los pasos del formulario */
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}

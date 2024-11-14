@@ -1,0 +1,45 @@
+.borde {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    /*Le da border a los campos*/
+}
+
+.imagen-fondo {
+    z-index: -1;
+    /*Se posiciona atras de otros elementos*/
+
+}
+
+.imagen-fondo-derecha {
+    z-index: -1;
+    /*Se posiciona atras de otros elementos*/
+}
+
+
+.btn {
+    width: 100%;
+    /*El botón tiene un ancho del 100% de su tamaño*/
+}
+
+.container {
+    margin-top: 100px;
+    /*El contenedor esta 100 pixeles abajo de su posición original*/
+}
+
+.color-form{
+    background-color: #334195;
+    border-radius: 15px;
+}
+
+
+.text-margin {
+    margin-top: 20px;
+}
+
+.margin-contenedor {
+    margin-top  : 0px !important;
+}
+
+.circulo {
+    border-radius: 50%;
+}

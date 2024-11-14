@@ -1,0 +1,47 @@
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-email {
+    font-size: 1rem;
+    color: #777;
+}
+
+.margin{
+    margin-right: 5px !important;
+}
+.contenedor-perfil {
+    position: relative;
+    background: linear-gradient(135deg, #03045E, #647AA3); /* Fondo con gradiente */
+    color: white; /* Color del texto */
+    padding-top: 20px;
+    padding-bottom: 80px; /* Aumentado para acomodar la imagen más grande */
+    border-bottom-left-radius: 50% 20%; /* Esquinas redondeadas en la parte inferior */
+    border-bottom-right-radius: 50% 20%; /* Esquinas redondeadas en la parte inferior */
+}
+.imagen-perfil {
+    width: 160px; /* Ancho de la imagen aumentado */
+    height: 160px; /* Altura de la imagen aumentada */
+    border-radius: 50%; /* Imagen circular */
+    border: 5px solid white; /* Borde blanco más grande */
+    object-fit: cover; /* Ajuste de la imagen para cubrir el contenedor */
+    position: absolute;
+    bottom: -80px; /* Ajuste de la posición */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+}
+.cabecera-perfil {
+    margin-bottom: 100px; /* Ajuste del margen inferior */
+}
+.btn-borde-azul {
+    border-color: #fff; /* Color del borde del botón */
+}
+.bg-color-azul-principal {
+    background-color: #3F51B5; /* Color de fondo del botón */
+}
+
+.margen-custom{
+    margin-top: 100px;
+}

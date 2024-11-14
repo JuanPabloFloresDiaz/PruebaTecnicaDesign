@@ -1,0 +1,174 @@
+@charset "utf8";
+* {
+    box-sizing: border-box;
+}
+
+.field{
+    width: 800px;
+    height: 600px;
+    max-width: 800px;
+    max-height: 600px;
+    background: repeating-linear-gradient(
+        to right, 
+        #367405, /* Tono más oscuro de verde */
+        #367405 50px,
+        #4A900B 50px, /* Tono más claro de verde */
+        #4A900B 100px
+    );
+    padding: 40px;
+    color: #fff;
+    margin: 40px auto;
+    box-shadow: 0 16px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.field:hover {
+    box-shadow: 0 16px 30px rgba(123, 249, 76, 0.5); /* Resplandor verde */
+    transform: scale(1.05); /* Efecto de zoom suave */
+}
+
+.inner{
+    border: 4px solid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.middle-line{
+    position: absolute;
+    left: calc(50%);
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+}
+
+.middle-circle{
+    width: 150px;
+    height: 150px;
+    border: 4px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+}
+
+.goal{
+    height: 176px;
+    width: 50px;
+    position: absolute;
+    top: calc(50% - 88px);
+    border: 4px solid;
+}
+
+.goal.is-right{
+    right: -4px;
+}
+
+.goal.is-left{
+    left: -4px;
+}
+
+.penalty{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: calc(50% - 4px);
+}
+
+.goal.is-right > .penalty{
+    left: -40px;
+}
+.goal.is-left > .penalty{
+    right: -40px;
+}
+
+.bow{
+    width: 146px;
+    height: 146px;
+    border: 4px solid;
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 73px);
+}
+
+.bow.is-left{
+    left: 0;
+}
+
+.bow.is-right{
+    right: 0;
+}
+
+.penalty-area{
+    position: absolute;
+    height: 260px;
+    top: calc(50% - 130px);
+    border: 4px solid;
+    width: 114px;
+}
+
+.penalty-area.is-right{
+    right: -4px;
+    background: repeating-linear-gradient(
+        to right,
+        #4A900B,  /* Tono más oscuro de verde */
+        #4A900B 50px, 
+        #367405 50px, /* Tono más claro de verde */
+        #367405 100px
+    );
+}
+
+.penalty-area.is-left{
+    left: -4px;
+    background: repeating-linear-gradient(
+        to left,
+        #367405,  /* Tono más oscuro de verde */
+        #367405 50px, 
+        #4A900B 50px, /* Tono más claro de verde */
+        #4A900B 100px
+    );
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilo para las cartas de los jugadores */
+.player-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.player-card {
+    position: absolute;
+    width: 85px;
+    z-index: 10;
+    font-size: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.player-card:hover{
+    box-shadow: 0 16px 30px rgba(76, 152, 249, 0.5); /* Resplandor verde */
+    transform: scale(1.05); /* Efecto de zoom suave */
+}
+
+.logo{
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 25%;
+}
+
+.avatar{
+    max-width: 40px;
+    max-height: 40px;
+}

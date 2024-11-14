@@ -1,0 +1,106 @@
+body {
+    background-image: url(../img/svg/fondo_index.svg);
+    /* Imagen de fondo en toda la pantalla */
+    background-repeat: no-repeat;
+    /* No se repite lka imagen */
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.color-title {
+    color: #03045E;
+}
+
+.btn-color {
+    background-color: #03045E;
+    /* Color del botón */
+    color: #fff;
+    /* Letra del botón */
+}
+
+.btn-color:hover {
+    color: #03045E;
+    /* Cambia la letra del botón al poner el mouse encima */
+}
+
+.borde-btn {
+    border: 2px solid #03045E;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    transition: all 0.3s ease;
+    /* Animación de transición */
+}
+
+.borde-btn:hover {
+    transform: scale(1.05);
+    /* Escala al 105% en hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    /* Sombra más pronunciada en hover */
+}
+
+/* Estilos generales para el borde */
+.borde {
+    border: 2px solid #03045E;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    transition: all 0.3s ease;
+    /* Animación de transición */
+}
+
+.borde:hover {
+    transform: scale(1.05);
+    /* Escala al 105% en hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    /* Sombra más pronunciada en hover */
+}
+
+.imagen-fondo {
+    z-index: -1;
+}
+
+/* Estilos para el contenedor de iconos */
+.icon-container {
+    background-color: #ffffff;
+    /* Fondo suave */
+    transition: background-color 0.3s ease;
+    /* Animación de transición */
+}
+
+/* Estilos para el color del icono por defecto */
+.grupo-campos-texto .icon-container .input-icon {
+    color: #000;
+    /* Color por defecto del icono */
+}
+
+/* Estilos para el color del icono y del contenedor cuando se selecciona el input en el login privado */
+.grupo-campos-texto:focus-within .icon-container .input-icon {
+    color: #007bff;
+    /* Color azul al seleccionar el input */
+}
+
+.grupo-campos-texto:focus-within .icon-container {
+    background-color: #fff;
+    /* Fondo azul al seleccionar el input */
+}
+
+/* Estilos para el contenedor de iconos en el login público */
+.grupo-campos-texto-publico .icon-container .input-icon {
+    color: #000000;
+    /* Color por defecto del icono */
+}
+
+/* Estilos para el color del icono y del contenedor cuando se selecciona el input en el login público */
+.grupo-campos-texto-publico:focus-within .icon-container .input-icon {
+    color: #007bff;
+    /* Color verde al seleccionar el input */
+}
+
+.grupo-campos-texto-publico:focus-within .icon-container {
+    background-color: #d6f5d6;
+    /* Fondo verde al seleccionar el input */
+}

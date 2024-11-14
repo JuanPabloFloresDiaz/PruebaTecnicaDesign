@@ -1,0 +1,53 @@
+.navbar {
+    background-image: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37));
+}
+
+#navbar {
+    background-image: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37));
+}
+
+.equipos {
+    background-image: linear-gradient(180deg, rgb(1, 2, 37), rgb(2, 8, 135));
+}
+
+#titleHome{
+    font-size: 70px;
+}
+
+.equipo {
+    background-image: linear-gradient(180deg, rgb(2, 8, 135), rgb(1, 2, 37)) !important;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0; /* Alineado al borde superior de la pantalla */
+    left: 0; /* Alineado al borde izquierdo */
+    right: 0; /* Alineado al borde derecho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: transform 0.3s ease; /* Transición suave para ocultar */
+}
+.hidden {
+    transform: translateY(-100%); /* Mueve la barra fuera de la vista */
+}
+
+#totalRows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-item.active .nav-link {
+    color: white;
+    background-color: #e5e8e8; /* Puedes ajustar el color que prefieras */
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #titleHome{
+        font-size: 50px;
+    }
+}
+
+.trofeo{
+    height: 100px;
+    width: 80px;
+}
